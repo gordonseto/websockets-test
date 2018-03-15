@@ -33,7 +33,7 @@ func Echo(ws *websocket.Conn) {
 func main() {
 	http.Handle("/", websocket.Handler(Echo))
 
-	if err := http.ListenAndServe(":1234", nil); err != nil {
+	if err := http.ListenAndServe(":8080", nil); err != nil {
 		log.Fatal("ListenAndServe:", err)
 	}
 }
